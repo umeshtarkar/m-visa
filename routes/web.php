@@ -12,5 +12,28 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/apply-visa', function () {
+    return view('e-visafirst');
+});
+
+Route::get('/news', function () {
+    return view('news');
+});
+
+Route::get('/typography', function () {
+    return view('typography');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
